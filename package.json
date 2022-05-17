@@ -1,0 +1,51 @@
+{
+  "name": "remix-template-express",
+  "private": true,
+  "description": "",
+  "license": "",
+  "sideEffects": false,
+  "prisma": {
+    "seed": "node --require esbuild-register prisma/seed.ts"
+  },
+  "scripts": {
+    "build": "remix build",
+    "dev": "remix build && run-p dev:*",
+    "dev:node": "PORT=3300 cross-env NODE_ENV=development nodemon ./server.js --watch ./server.js",
+    "dev:remix": "remix watch",
+    "start": "PORT=3300 cross-env NODE_ENV=production node ./server.js",
+    "format": "prettier --write --plugin-search-dir=. ."
+  },
+  "dependencies": {
+    "@prisma/client": "^3.13.0",
+    "@remix-run/express": "^1.4.3",
+    "@remix-run/node": "^1.4.3",
+    "@remix-run/react": "^1.4.3",
+    "bcryptjs": "^2.4.3",
+    "compression": "^1.7.4",
+    "cross-env": "^7.0.3",
+    "express": "^4.18.1",
+    "morgan": "^1.10.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.10",
+    "@babel/preset-env": "^7.17.10",
+    "@remix-run/dev": "^1.4.3",
+    "@remix-run/eslint-config": "^1.4.3",
+    "@types/bcryptjs": "^2.4.2",
+    "@types/react": "^17.0.44",
+    "@types/react-dom": "^17.0.16",
+    "esbuild": ">=0.12 <1",
+    "esbuild-register": "^3.3.2",
+    "eslint": "^8.14.0",
+    "nodemon": "^2.0.16",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.6.2",
+    "prisma": "^3.13.0",
+    "typescript": "^4.6.4"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}
