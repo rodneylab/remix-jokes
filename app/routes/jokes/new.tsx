@@ -1,7 +1,7 @@
 import type { ActionFunction, LoaderFunction } from '@remix-run/node';
 import { json, redirect } from '@remix-run/node';
 import { Form, Link, useActionData, useCatch, useTransition } from '@remix-run/react';
-import { JokeDisplay } from '~/components/joke';
+import JokeDisplay from '~/components/joke';
 import { db } from '~/utils/db.server';
 import { getUserId, requireUserId } from '~/utils/session.server';
 
