@@ -12,6 +12,7 @@
     "dev": "remix build && run-p dev:*",
     "dev:node": "PORT=3300 cross-env NODE_ENV=development nodemon ./server.js --watch ./server.js",
     "dev:remix": "remix watch",
+    "prisma:generate": "prisma generate",
     "start": "PORT=3300 cross-env NODE_ENV=production node ./server.js",
     "format": "prettier --write --plugin-search-dir=. ."
   },
